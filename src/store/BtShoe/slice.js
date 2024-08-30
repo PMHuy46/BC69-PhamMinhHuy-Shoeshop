@@ -26,9 +26,8 @@ export const { reducer: btShoeReducer, actions: btShoeActions } = createSlice({
             cartShoe[index].cartQuantity += quantity
             console.log(id)
         },
-        deleteShoe: ({ cartShoe }, { payload }) => {
-            cartShoe = cartShoe.filter(item => item.id != payload)
-            console.log(payload)
+        deleteShoe: (state, { payload }) => {
+            state.cartShoe = state.cartShoe.filter(item => item.id != payload)
         }
 
     }

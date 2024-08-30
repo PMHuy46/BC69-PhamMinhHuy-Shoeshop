@@ -97,6 +97,7 @@ export const ModalCart = () => {
                         className="text-danger fw-blod "
                         style={{ cursor: "pointer" }}
                         onClick={() => {
+                          console.log("delete")
                           dispatch(btShoeActions.deleteShoe(item.id))
                         }}
                       >
